@@ -1,0 +1,244 @@
+﻿html{
+  font-size:12px;
+}
+
+/*pseudo element*/
+.rabbit div,
+.rabbit::after,
+.head::before,
+.top_body::after,
+.hand::after,
+.bottom_body::before,
+.foot::before{
+  content: "";
+  position: absolute;
+  background: #2c2f21;
+}
+
+.rabbit::after{ /*臼 幹 就容器啦 不知道中文*/
+  top:19rem;
+  left:-3rem;
+  height: 0;
+  width: 2rem;
+  background:transparent;
+  border-top: 5rem solid #2c2f21;
+  border-left: 2rem solid transparent;
+  border-right: 2rem solid transparent;
+  border-radius:40% 40% 50% 50% /20% 20% 60% 60%;
+}
+
+.rabbit{
+  width:9rem;/*為了置中*/
+  height:24rem;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+/*
+.rabbit div{
+  background:black;
+  position: absolute;
+}
+
+.ear{
+  top:0.5rem;
+  left: 9rem;
+  width: 3rem;
+  height: 8rem;
+  border-radius:50% 50% 50% 50% /40% 40% 60% 60%;
+  transform:rotate(25deg);
+}
+
+.ear:first-child{
+  top:0;
+  left: 6rem;
+  transform:rotate(-5deg);
+}*/
+
+.ears{
+  top:-5.7rem;
+  left:6.8rem;
+  width: 3rem;
+  height: 8rem;
+  border-radius:50% 50% 50% 50% /40% 40% 60% 60%;
+  transform:rotate(3deg);
+}
+
+.ears:first-child{
+top: -4.7rem;
+    left: 9.7rem;
+    transform: rotate(33deg);
+}
+
+.head{
+  top:6rem;
+  /*width: 180px;
+  height: 126px;*/
+  width: 11rem;
+  height: 8rem;
+  border-radius:60% 40% 40% 60%/50% 50% 50% 50%;
+  /* horizontal radius / vertical radius */
+  transform:rotate(-8deg);
+  
+  animation-duration: 1s;
+  animation-name: head_move;
+  animation-iteration-count:infinite;
+}
+
+.head::before{ /*eye*/
+  top:2rem;
+  left:3rem;
+  height:1rem;
+  width:1rem;
+  border-radius: 100%;
+  background:#ebca47;
+}
+
+.hand{
+  top: 2.3rem;
+  left: -4rem;
+  height: 2.1rem;
+  width: 6rem;
+  border-radius: 50% 0 0 59%;
+  transform: rotate(11deg);
+  
+  transform-origin:75% 50%;
+  
+  animation-duration: 1s;
+  animation-name: pounds;
+  animation-iteration-count:infinite;
+}
+
+.hand::after{ /*杵*/
+  top:-3.5rem;
+  left:0.5rem;
+  height:11rem;
+  width:2rem;  
+  border-radius: 90% 90% 90% 90%/50% 50% 50% 50%;
+}
+
+.top_body{
+  top:13rem;
+  left:4rem;
+  height:6rem;
+  width:8rem;
+  border-radius:20% 75% 20% 60%/40% 80% 20% 50%;
+  
+  animation-duration: 1s;
+  animation-name: top_body_move;
+  animation-iteration-count:infinite;
+  
+  /*background: red !important;*/
+}
+
+/*下半身*/
+/*
+.top_body::after{ 
+    top: 3rem;
+    height: 7rem;
+    width: 8.5rem;
+    border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
+    transform:rotate(10deg);
+}*/
+
+.bottom_body{
+  top: 16rem;
+  left:3.4rem;
+  height: 7rem;
+  width: 8.5rem;
+  border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
+  
+  animation-duration: 1s;
+  animation-name: bottom_body_move;
+  animation-iteration-count:infinite;
+}
+
+.top_body,
+.bottom_body{
+  transform:rotate(10deg);
+ }
+
+.bottom_body::before{ /*尾巴*/
+    top: 3.2rem;
+    right: -1.3rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.foot{
+    top: 22rem;
+    left: 2.5rem;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 44% 54% 32% 24% / 94% 70% 60% 56%;
+}
+
+/*尾巴*/
+/*
+.foot::before{ 
+    top: -2rem;
+    right: -2.5rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+}*/
+
+
+
+@keyframes pounds {
+  100% {
+    transform: rotate(0deg);
+  }
+  
+  50%{
+    transform: rotate(12deg);
+  }
+
+  0% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes head_move {
+    100% {
+    transform: rotate(-8deg);
+  }
+  
+  50%{
+    transform: rotate(-2deg);
+  }
+
+  0% {
+    transform: rotate(-8deg);
+  }
+}
+
+@keyframes top_body_move {
+  100% {
+    border-radius:20% 75% 20% 60%/40% 80% 20% 50%;
+  }
+  
+  50%{    
+    border-radius:20% 70% 20% 60%/40% 100% 20% 50%;
+  }
+
+  0% {
+    border-radius:20% 75% 20% 60%/40% 80% 20% 50%;
+  }
+}
+
+@keyframes bottom_body_move {
+  100% {
+    border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
+  }
+  
+  50%{    
+    border-radius: 0% 32% 90% 80%/0% 100% 100% 90%;
+  }
+
+  0% {
+    border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
+  }
+}
