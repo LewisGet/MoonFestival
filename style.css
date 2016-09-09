@@ -66,24 +66,21 @@
 }
 
 .ears:first-child{
-top: -4.7rem;
-    left: 9.7rem;
-    transform: rotate(33deg);
+  top: -4.7rem;
+  left: 9.7rem;
+  transform: rotate(33deg);
 }
 
 .head{
   top:6rem;
-  /*width: 180px;
-  height: 126px;*/
+  /*比例width: 180px;height: 126px;*/
   width: 11rem;
   height: 8rem;
   border-radius:60% 40% 40% 60%/50% 50% 50% 50%;
   /* horizontal radius / vertical radius */
   transform:rotate(-8deg);
   
-  animation-duration: 1s;
   animation-name: head_move;
-  animation-iteration-count:infinite;
 }
 
 .head::before{ /*eye*/
@@ -102,12 +99,8 @@ top: -4.7rem;
   width: 6rem;
   border-radius: 50% 0 0 59%;
   transform: rotate(11deg);
-  
   transform-origin:75% 50%;
-  
-  animation-duration: 1s;
   animation-name: pounds;
-  animation-iteration-count:infinite;
 }
 
 .hand::after{ /*杵*/
@@ -124,34 +117,18 @@ top: -4.7rem;
   height:6rem;
   width:8rem;
   border-radius:20% 75% 20% 60%/40% 80% 20% 50%;
-  
-  animation-duration: 1s;
   animation-name: top_body_move;
-  animation-iteration-count:infinite;
-  
-  /*background: red !important;*/
 }
 
 /*下半身*/
-/*
-.top_body::after{ 
-    top: 3rem;
-    height: 7rem;
-    width: 8.5rem;
-    border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
-    transform:rotate(10deg);
-}*/
-
-.bottom_body{
+.bottom_body{ 
   top: 16rem;
   left:3.4rem;
   height: 7rem;
   width: 8.5rem;
   border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
   
-  animation-duration: 1s;
   animation-name: bottom_body_move;
-  animation-iteration-count:infinite;
 }
 
 .top_body,
@@ -165,6 +142,7 @@ top: -4.7rem;
     height: 2rem;
     width: 2rem;
     border-radius: 100%;
+    animation-name: tail_move;
 }
 
 .foot{
@@ -175,17 +153,18 @@ top: -4.7rem;
     border-radius: 44% 54% 32% 24% / 94% 70% 60% 56%;
 }
 
-/*尾巴*/
-/*
-.foot::before{ 
-    top: -2rem;
-    right: -2.5rem;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 100%;
-}*/
+/*animation setting*/
 
+.head,
+.hand,
+.top_body,
+.bottom_body,
+.bottom_body::before{ /*尾巴*/
+  animation-iteration-count:infinite;
+  animation-duration: 1s;
+}
 
+/*keyframes*/
 
 @keyframes pounds {
   100% {
@@ -240,5 +219,19 @@ top: -4.7rem;
 
   0% {
     border-radius: 0% 32% 90% 60%/0% 100% 100% 100%;
+  }
+}
+
+@keyframes tail_move {
+  100% {
+    top: 3.2rem;
+  }
+  
+  50%{    
+    top: 2.8rem;
+  }
+
+  0% {
+    top: 3.2rem;
   }
 }
