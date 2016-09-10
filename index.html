@@ -5,6 +5,10 @@
 		<title>Jade Rabbit pounding medicine</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style>
+			html,body{
+				margin: 0;
+				padding:0;
+			}
 			body{
 				background-color: #154e85;
 				height:100%;
@@ -19,24 +23,54 @@
 				top:50%;
 				left:50%;
 				transform:translate(-50%,-50%);
+				box-shadow: 0px 0px 38px 10px #e6c53f,21px 14px 19px 4px #c7a61f inset;
+			}
+			#circle::after{
+				content: "";
+				position: absolute;
+				background: #c7a61f;
+				top: 8vmax;
+				right: 7vmax;
+				height: 5vmax;
+				width: 5vmax;
+				border-radius: 100%;
 				box-shadow: 0px 0px 38px 10px #e6c53f;
+			}
+			#circle::before{
+				content: "";
+				position: absolute;
+				background: #c7a61f;
+				top: 13vmax;
+				right: 4vmax;
+				height: 2vmax;
+				width: 2vmax;
+				border-radius: 100%;
+				box-shadow: 0px 0px 38px 10px #e6c53f;
+			}
+
+			#title{
+				margin:0 auto;
 			}
 		</style>
 	</head>
 	<body>
-	<div id="circle"></div>
-	<div class="rabbit">
-		<!--div class="ear"></div>
-		<div class="ear"></div-->
-		<div class="head">
-			<div class="ears"></div>
-			<div class="ears"></div>
+		<!--<h1 id="title">Moon Festival</h1>-->
+		<div id="circle">
+			<div class="cloud1"></div>
 		</div>
-		<div class="top_body">
-			<div class="hand"></div>
+		<div class="rabbit">
+			<!--div class="ear"></div>
+			<div class="ear"></div-->
+			<div class="head">
+				<div class="ears"></div>
+				<div class="ears"></div>
+			</div>
+			<div class="top_body">
+				<div class="hand"></div>
+			</div>
+			<div class="bottom_body"></div>
+			<div class="foot"></div>
 		</div>
-		<div class="bottom_body"></div>
-		<div class="foot"></div>
-	</div>
+		
 	</body>
 </html>
