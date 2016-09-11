@@ -237,16 +237,19 @@
 }
 
 /*cloud*/
+.cloud{
+  position: relative;
+  background: white;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 .cloud1{
-  position: relative;
   top: 28vmax;
   left: 0vmax;
   height: 1.5rem;
   width: 11rem;
   border-radius: 38% 56% 38% 56%/60% 70% 60% 70%;
-  background: white;
-  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cloud1::after{
@@ -266,8 +269,37 @@
     transform: rotate(-41deg);   
 }
 
-.cloud1::after,.cloud1::before{
+.cloud1::after,
+.cloud1::before,
+.cloud2::after,
+.cloud2::before{
   content: "";
   position: absolute;
   background: white;
+}
+
+.cloud2{
+    top: 30vmax;
+    right: -20vmax;
+    height: 1.3rem;
+    width: 21rem;
+    border-radius: 18% 56% 38% 26%/60% 70% 60% 70%;
+}
+
+.cloud2::after{
+  top:-3rem;
+  left:3rem;
+  width:5em;
+  height: 4em;
+  border-radius: 200% 145% 0% 0%/300% 100% 0% 0%;
+  box-shadow:5rem -1.6rem 0 0.7rem white;
+}
+
+.cloud2::before{
+    top: -4rem;
+    left: 13rem;
+    height: 5rem;
+    width: 6rem;
+    border-radius: 55% 85% 90% 0% /26% 117% 10% 0%;
+    /* box-shadow: 6rem 3rem 0 0.1rem white; */
 }
