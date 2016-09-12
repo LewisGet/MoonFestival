@@ -34,6 +34,7 @@
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+  z-index: 10;
 }
 /*
 .rabbit div{
@@ -241,12 +242,13 @@
   position: relative;
   background: white;
   box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  z-index: 11;
 }
 
 
 .cloud1{
   top: 28vmax;
-  left: 0vmax;
+  left: -1vmax;
   height: 1.5rem;
   width: 11rem;
   border-radius: 38% 56% 38% 56%/60% 70% 60% 70%;
@@ -279,27 +281,86 @@
 }
 
 .cloud2{
-    top: 30vmax;
-    right: -20vmax;
-    height: 1.3rem;
-    width: 21rem;
-    border-radius: 18% 56% 38% 26%/60% 70% 60% 70%;
+  top: 18vmax;
+  right: -22vmax;
+  height: 1.7rem;
+  width: 21rem;
+  border-radius: 18% 56% 38% 26%/60% 70% 60% 70%;
 }
 
 .cloud2::after{
-  top:-3rem;
-  left:3rem;
-  width:5em;
-  height: 4em;
+  top: -2rem;
+  left: 3rem;
+  width: 4em;
+  height: 3em;
   border-radius: 200% 145% 0% 0%/300% 100% 0% 0%;
-  box-shadow:5rem -1.6rem 0 0.7rem white;
+  box-shadow: 4rem -1.6rem 0 0.7rem white;
 }
 
 .cloud2::before{
-    top: -4rem;
-    left: 13rem;
-    height: 5rem;
-    width: 6rem;
+    top: -3rem;
+    left: 11rem;
+    height: 4rem;
+    width: 5rem;
     border-radius: 55% 85% 90% 0% /26% 117% 10% 0%;
     /* box-shadow: 6rem 3rem 0 0.1rem white; */
+}
+
+/*star*/
+.star{
+  height:5px;
+  width:5px;
+  box-shadow:6vw 10vh 0px 2px #ebca47;
+  
+}
+
+.star,
+.star::after,
+.star::before{
+  background: #ebca47;  
+  border-radius:100%;
+  position: absolute;
+  z-index: 9;
+}
+
+.star::after,
+.star::before{
+  content: "";
+}
+
+.star::after{
+  top:7vh;
+  left:20vw;
+  height:4px;
+  width:4px;
+}
+
+.star::before{
+  top:20vh;
+  left:15vw;
+  height:5px;
+  width:5px;
+}
+
+#start1{
+  top:2vh;
+  left: 2vw;
+}
+
+#start2{
+  top: 80vh;
+  left: 80vw;
+  transform: rotate(161deg);
+}
+
+#start3{
+  top: 50vh;
+  left: 27vw;
+  transform: rotate(162deg);
+}
+
+#start4{
+  top: 39vh;
+  left: 88vw;
+  transform: rotate(-165deg);
 }
