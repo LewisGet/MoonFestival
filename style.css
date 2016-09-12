@@ -245,6 +245,17 @@
   z-index: 11;
 }
 
+.cloud1::after,
+.cloud1::before,
+.cloud2::after,
+.cloud2::before,
+.cloud3::after,
+.cloud3::before{
+  content: "";
+  position: absolute;
+  background: white;
+}
+
 
 .cloud1{
   top: 28vmax;
@@ -269,15 +280,6 @@
     width: 3rem;
     border-radius: 100% 100% 12% 100%/100% 100% 4% 100%;
     transform: rotate(-41deg);   
-}
-
-.cloud1::after,
-.cloud1::before,
-.cloud2::after,
-.cloud2::before{
-  content: "";
-  position: absolute;
-  background: white;
 }
 
 .cloud2{
@@ -306,12 +308,41 @@
     /* box-shadow: 6rem 3rem 0 0.1rem white; */
 }
 
+.cloud3{
+  top: 5vmax;
+  left: -1vmax;
+  /*height: 2rem;
+  width: 6rem;*/
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 67% 56% 38% 56%/64% 70% 60% 70%;
+  box-shadow: 3.5rem 1rem 0 2px white;
+}
+
+.cloud3::before,
+.cloud3::after{
+  border-radius: 38% 56% 38% 56%/60% 70% 60% 70%;
+  /*height: 2rem;
+  width: 5rem;*/
+  height: 1.5rem;
+  width: 5rem;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+.cloud3::before{
+    top: 1rem;
+    /*left: -2rem;*/
+    left: -1.5rem;
+}
+.cloud3::after{
+    top: 2rem;
+    left: 2rem;
+}
+
 /*star*/
 .star{
   height:5px;
   width:5px;
-  box-shadow:6vw 10vh 0px 2px #ebca47;
-  
+  box-shadow:6vw 10vh 0px 1px #ebca47;
 }
 
 .star,
@@ -320,7 +351,7 @@
   background: #ebca47;  
   border-radius:100%;
   position: absolute;
-  z-index: 9;
+  z-index: 0;
 }
 
 .star::after,
@@ -349,7 +380,7 @@
 
 #start2{
   top: 80vh;
-  left: 80vw;
+  left: 79vw;
   transform: rotate(161deg);
 }
 
@@ -363,4 +394,10 @@
   top: 39vh;
   left: 88vw;
   transform: rotate(-165deg);
+}
+
+#start5{
+  top: 78vh;
+  left: 17vw;
+  transform: rotate(-22deg);
 }
