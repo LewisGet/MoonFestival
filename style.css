@@ -407,7 +407,7 @@
 
 .fixed_position{
   position:absolute;
-  top:200px;
+  top:-5px;
   /*width:1px;
   height: 12px;*/
   transform:rotate(-45deg);
@@ -438,7 +438,7 @@
 
 @keyframes star {
   100% {
-    left:-250px;
+    left:-550px;
     opacity: 0;
   }
   
@@ -447,21 +447,21 @@
   }
   
   90% {
-    left:300px;
+    left:0;
     opacity: 1;
   }
   0%{
-    left:300px;
+    left:0;
     opacity: 1;
   }
 }
 
 #shooting_star1_position{
-  left:30vw;
+  left:45vw;
 }
 
 #shooting_star2_position{
-  right:20vw;
+  left:85vw;
 }
 
 #shooting_star2_position>.shooting_star{
