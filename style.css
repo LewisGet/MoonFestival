@@ -318,6 +318,8 @@
   width: 5rem;
   border-radius: 67% 56% 38% 56%/64% 70% 60% 70%;
   box-shadow: 3.5rem 1rem 0 2px white;
+
+  /*animation: cloud_fly 8s linear 2s infinite;*/
 }
 
 .cloud3::before,
@@ -338,6 +340,18 @@
     top: 2rem;
     left: 2rem;
 }
+
+@keyframes cloud_fly{
+  100%{
+    left:100vw;  
+  }
+
+  0%{
+    left:0vw;
+  }
+  /*x:4,y:3*/
+}
+
 
 /*star*/
 .star{
@@ -461,7 +475,7 @@
 }
 
 #shooting_star2_position{
-  left:85vw;
+  right: 111px;
 }
 
 #shooting_star2_position>.shooting_star{
@@ -479,6 +493,15 @@
   width: 8.5rem;
   transform: scale(0.5) rotate(53deg);
   bottom:0;
+
+  animation:rocket_fly 3s cubic-bezier(0.55, 0.06, 0.68, 0.19) 2;
+
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+.rocket:hover{
+  cursor: pointer;
 }
 
 .rocket::before,
@@ -568,9 +591,21 @@
   50%{
     box-shadow:8px -8px 0 11px #f19b2c;
   }
-  
+
   0%{
     box-shadow:8px -8px 0 10px #f19b2c;
   }
 }
 
+@keyframes rocket_fly{
+  100%{
+    left:63vw;
+    bottom: 42vw;    
+  }
+
+  0%{
+    left:7vw;
+    bottom: 0;
+  }
+  /*x:4,y:3*/
+}
